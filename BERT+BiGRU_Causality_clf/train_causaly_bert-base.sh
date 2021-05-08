@@ -1,0 +1,12 @@
+python3 bert_model-BiGRU.py --cuda --train \
+--train-batch_size 64 \
+--dev-batch-size 64 \
+--num-train-epochs 10 \
+--learning-rate 3e-5 \
+--gradient-accumulation-steps 4 \
+--train-filename Train1.csv \
+--eval-filename  Dev1.csv \
+--bert-model data/bert-base-uncased.tar.gz \
+--bert-vocab  data/bert-base-uncased-vocab.txt \
+--model-name Causaly_bert-base+BiGRU1 \
+--log-file Causaly_bert-base+BiGRU_eval_results_1.txt
